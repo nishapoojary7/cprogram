@@ -1,15 +1,25 @@
-package practice;
+package AbstractDemo;
 
-public class Student {
-	public void identity(String x,int y) {
-		String name=x;
-		int rollNo=y;
-		System.out.println("name="+name);
-		System.out.println("rollno="+rollNo);
+public class Student implements Resume {
+	String usn;
+	String name;
+	String deciplain;
+	double result;
+	long phoneNo;
+	public Student(String u,String n,String d,double r,long ph) {
+		this.usn=u;
+		this.name=n;
+		this.deciplain=d;
+		this.result=r;
+		this.phoneNo=ph;	
 	}
-	public static void main(String[] args) {
+	@Override
+	public void biodata() {
 		// TODO Auto-generated method stub
-		Student st=new Student();
-		st.identity("john",2);
+		System.out.println("the usn="+this.usn);
+		System.out.println("the name="+this.name);
+		System.out.println("the deciplain="+this.deciplain);
+		System.out.println("the result="+this.result);
+		System.out.println("the phoneno="+this.phoneNo);
 	}
 }
